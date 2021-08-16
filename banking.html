@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bank Transection</title>
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <header>
+	<h1 class="p-5 text-5xl text-center">
+	  Total <span class="text-pink-600">Banking</span> Transections
+	</h1>
+      </header>
+      <div class="grid grid-cols-3 gap-4 w-full mb-5">
+	<div class="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded py-4">
+	  <h1 class="text-xl text-center text-white">Deposit</h1>
+	  <h4 class="text-5xl text-center text-white">$<span id="deposit-amount">00</span></h4>
+	</div>
+	<div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded py-4">
+	  <h1 class="text-xl text-center text-white">Withdraw</h1>
+	  <h4 class="text-5xl text-center text-white">$<span id="deposit-amount">00</span></h4>
+	</div>
+	<div class="bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded py-4">
+	  <h1 class="text-xl text-center text-white">Balance</h1>
+	  <h4 class="text-5xl text-center text-white">$<span id="deposit-amount">10000</span></h4>	
+	</div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 w-full">
+	<div class="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded py-4 flex 
+		    justify-center">
+	  <input name="deposit" type="number" value="0" placeholder="$ amount for deposit" />
+	  <button id="deposit" class="bg-green-700 text-white">DEPOSIT</button>
+	</div>
+	<div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded py-4 flex justify-center">
+	  <input name="deposit" type="number" value="0" placeholder="$ amount for withdraw" />
+	  <button id="withdraw" class="bg-green-700 text-white">WITHDRAW</button>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
