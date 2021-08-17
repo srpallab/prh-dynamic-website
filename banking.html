@@ -14,31 +14,39 @@
 	  Total <span class="text-pink-600">Banking</span> Transections
 	</h1>
       </header>
-      <div class="grid grid-cols-3 gap-4 w-full mb-5">
+      <div class="grid md:grid-cols-3 gap-4 w-full mb-5 p-4">
 	<div class="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded py-4">
 	  <h1 class="text-xl text-center text-white">Deposit</h1>
 	  <h4 class="text-5xl text-center text-white">$<span id="deposit-amount">00</span></h4>
 	</div>
 	<div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded py-4">
 	  <h1 class="text-xl text-center text-white">Withdraw</h1>
-	  <h4 class="text-5xl text-center text-white">$<span id="deposit-amount">00</span></h4>
+	  <h4 class="text-5xl text-center text-white">$<span id="withdraw-amount">00</span></h4>
 	</div>
 	<div class="bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded py-4">
 	  <h1 class="text-xl text-center text-white">Balance</h1>
-	  <h4 class="text-5xl text-center text-white">$<span id="deposit-amount">10000</span></h4>	
+	  <h4 class="text-5xl text-center text-white">$<span id="total-amount">10000</span></h4>	
 	</div>
       </div>
-      <div class="grid grid-cols-2 gap-4 w-full">
+      <div class="grid md:grid-col-1 lg:grid-cols-2 lg:gap-4 p-4">
 	<div class="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded py-4 flex 
-		    justify-center">
-	  <input name="deposit" type="number" value="0" placeholder="$ amount for deposit" />
-	  <button id="deposit" class="bg-green-700 text-white">DEPOSIT</button>
+		    flex-col md:flex-row justify-center items-center mb-5">
+	  <label for="deposit" class="text-white text-bold pr-4">Enter Your Deposite Amount: </label>
+	  <div class="flex justify-center items-center">
+	    <input class="text-center p-2 md:p-4" id="deposit" name="deposit" type="text" value="0" />
+	    <button id="deposit-btn" class="bg-green-700 text-white p-2 md:p-4">DEPOSIT</button>
+	  </div>
 	</div>
-	<div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded py-4 flex justify-center">
-	  <input name="deposit" type="number" value="0" placeholder="$ amount for withdraw" />
-	  <button id="withdraw" class="bg-green-700 text-white">WITHDRAW</button>
+	<div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded py-4 flex 
+		    flex-col md:flex-row justify-center items-center mb-5">
+	  <label for="withdraw" class="text-white text-bold pr-4">Enter Your Withdraw Amount: </label>
+	  <div class="flex justify-center items-center">
+	    <input class="text-center p-2 md:p-4" id="withdraw" name="withdraw" type="text" value="0" />
+	    <button id="withdraw-btn" class="bg-red-800 text-white p-2 md:p-4">WITHDRAW</button>
+	  </div>
 	</div>
       </div>
     </div>
+    <script src="js/banking.js"></script>
   </body>
 </html>
